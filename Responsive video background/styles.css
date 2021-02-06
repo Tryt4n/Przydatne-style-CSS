@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+
+.full-screen-video-container {
+    position: relative;
+    height: 100vh; /* 100% obecnego view-height */
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-screen-video-container video {
+    z-index: -1; /* umiejscowienie viedo względem innych obiektów (video schowane za obiektami) */
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%; /* pochodzenie video (czyli lewy górny róg) zostanie umieszczone po środku ekranu */
+    left: 50%;
+    transform: translate(-50%, -50%); /* środek video będzie dokładnie tam gdzie środek ekranu */
+}
+
+.full-screen-video-content {
+    font-size: 70px;
+    background-color: aliceblue;
+    color: #333;
+    padding: 20px;
+    margin-top: 100px;
+}
